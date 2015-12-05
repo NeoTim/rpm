@@ -306,6 +306,14 @@ RPM_GNUC_INTERNAL
 int parseExpressionBoolean(const char * expr);
 
 /** \ingroup rpmbuild
+ * Set environment variables for the build.
+ *
+ * @param spec		spec file control structure
+ */
+RPM_GNUC_INTERNAL
+void setBuildEnvironment(rpmSpec spec);
+
+/** \ingroup rpmbuild
  * Run a build script, assembled from spec file scriptlet section.
  *
  * @param spec		spec file control structure
