@@ -160,6 +160,7 @@ rpmRC doScript(rpmSpec spec, rpmBuildFlags what, const char *name,
 
     rpmlog(RPMLOG_NOTICE, _("Executing(%s): %s\n"), name, buildCmd);
     if (!(child = fork())) {
+	setBuildEnvironment(spec);
 	/* NSPR messes with SIGPIPE, reset to default for the kids */
 	signal(SIGPIPE, SIG_DFL);
 	errno = 0;

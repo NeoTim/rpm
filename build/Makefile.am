@@ -16,6 +16,7 @@ librpmbuild_la_SOURCES = \
 	parseFiles.c parsePreamble.c parsePrep.c parseReqs.c parseScript.c \
 	parseSpec.c reqprov.c rpmfc.c spec.c \
 	parsePolicies.c policies.c \
+	buildEnv.c \
 	rpmbuild_internal.h rpmbuild_misc.h
 
 librpmbuild_la_LDFLAGS = -version-info $(rpm_version_info)
